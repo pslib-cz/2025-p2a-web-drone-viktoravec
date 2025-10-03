@@ -1,0 +1,35 @@
+@layer reset, init, design;
+
+@import url(./normalize.css) layer(reset);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
+
+@layer design {
+    :root {
+        --color-scheme: light dark;
+        --header-bg-color: light-dark(#3B3E40, #3B3E40);
+        --primary-color: light-dark(#66D4D4, #2b5a5a);
+        --secondary-color: light-dark(#fff, #fff);
+        --text-color: light-dark(#fff, #000);
+        --bg-color: light-dark(#000, #fff);
+    }
+    html{
+        font-family: 'Open Sans', 'Sans-serif';
+        font-size: 100%;
+        color: var(--text-color);
+    }
+   .header {
+    background-image: url('../images/header-2560w.webp');
+    background-size: cover;
+    background-position: top left;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    line-height: 1.5;
+   }
+   .header__nav{
+    text-align: center;
+   }
+   .header__link {
+    display: inline-block;
+    margin-top: 1em;
+   }
+}
