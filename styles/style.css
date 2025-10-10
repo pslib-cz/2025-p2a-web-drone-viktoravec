@@ -3,33 +3,103 @@
 @import url(./normalize.css) layer(reset);
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
 
-@layer design {
+@layer init {
     :root {
         --color-scheme: light dark;
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
+        --header-text-color: light-dark(#fff, #fff);
         --primary-color: light-dark(#66D4D4, #2b5a5a);
-        --secondary-color: light-dark(#fff, #fff);
-        --text-color: light-dark(#fff, #000);
-        --bg-color: light-dark(#000, #fff);
+        --secondary-color: light-dark(#ffffff, #000000);
+        --text-color: light-dark(#000000, #ffffff);
+        --bg-color: light-dark(#ffffff, #000000);
     }
     html{
         font-family: 'Open Sans', 'Sans-serif';
         font-size: 100%;
         color: var(--text-color);
     }
-   .header {
+}
+
+@layer design {
+    body{
+        background-color: var(--bg-color);
+    }
+
+    main {
+        margin: 0 auto;
+        padding: 1rem;
+        max-width: 960px;
+    }
+
+    h1{
+        font-size: 4rem; /* 60px default, 1rem = 16px*/
+        font-weight: extra-bold;
+    }
+
+    .img-fluid {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    .img-block {
+        margin: 0;
+    }
+
+    .img-block__caption {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+   .header{
     background-image: url('../images/header-2560w.webp');
     background-size: cover;
     background-position: top left;
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
     line-height: 1.5;
+    padding: 1em;
    }
+
    .header__nav{
     text-align: center;
    }
-   .header__link {
+
+   .header__intro{
+    margin-top: 10vh;
+   }
+
+   .button {
     display: inline-block;
-    margin-top: 1em;
+    padding: 0.75em 2em;
+    border-radius: 0.5rem;
+   }
+
+   .button-light {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bolder;
+   }
+
+   .infoblock {
+    color: var(--text-color);
+    margin: 0;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-style:solid;
+    border-color: var(--primary-color);
+    border-width: 3px;
+   }
+
+   .infoblock__title {
+    padding-left: 1rem;
+    font-weight: bold;
+    font-weight: 700;
+    font-size: 20px;
+   }
+
+   .infoblock__body {
+    padding-left: 1rem;
    }
 }
