@@ -33,7 +33,18 @@
 
     h1{
         font-size: 4rem; /* 60px default, 1rem = 16px*/
-        font-weight: extra-bold;
+        font-weight: 800;
+        font-style: bold;
+    }
+
+    h2{
+    font-weight: 700;
+    font-size: 36px;
+    }
+
+    p{
+        font-size: 18px;
+        line-height: 1.35;
     }
 
     .img-fluid {
@@ -41,11 +52,9 @@
         display: block;
         height: auto;
     }
-
     .img-block {
         margin: 0;
     }
-
     .img-block__caption {
         text-align: center;
         margin-top: 1rem;
@@ -60,46 +69,81 @@
     line-height: 1.5;
     padding: 1em;
    }
-
    .header__nav{
+    margin-top: 2rem;
     text-align: center;
    }
-
    .header__intro{
     margin-top: 10vh;
+    margin-bottom: 4vh;
+    margin-left: 9vh;
+   }
+   .header__text{
+    width: 800px;
+    font-size: 18px;
+    line-height: 1.35;
+   }
+   .header__image{
+    width: 4.5rem;
+    height: auto;
    }
 
-   .button {
+   .button{
     display: inline-block;
+    margin-top: 1rem;
     padding: 0.75em 2em;
     border-radius: 0.5rem;
    }
-
-   .button-light {
+   .button__light{
     background-color: var(--bg-color);
     color: var(--text-color);
     text-decoration: none;
     font-weight: bolder;
    }
 
-   .infoblock {
+      .parameters__title{
+    font-weight: 700;
+    font-size: 36px;
+   }
+
+   .infoblock{
     color: var(--text-color);
     margin: 0;
     padding: 1.5rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     border-style:solid;
     border-color: var(--primary-color);
-    border-width: 3px;
+    border-width: 4px;
    }
-
-   .infoblock__title {
+   .infoblock__title{
     padding-left: 1rem;
-    font-weight: bold;
     font-weight: 700;
     font-size: 20px;
    }
-
-   .infoblock__body {
+   .infoblock__body{
     padding-left: 1rem;
+    font-size: 18px;
+    line-height: 1.35;
+   }
+
+   .features{
+    margin-top: 3rem;
+   }
+   .features__title{
+    font-weight: 700;
+    font-size: 20px;
+   }
+   .features__list li{
+    margin-top: 1rem;
+    font-size: 18px;
+   }
+   .features__list li::marker{
+    color: var(--primary-color);
+    font-size: 23px;
+   }
+
+   .provedeni{
+    margin-top: 6rem;
    }
 }
+
