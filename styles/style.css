@@ -5,18 +5,20 @@
 
 @layer init {
     :root {
-        --color-scheme: light dark;
+        --color-scheme: light-dark;
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
         --header-text-color: light-dark(#fff, #fff);
         --primary-color: light-dark(#66D4D4, #2b5a5a);
         --secondary-color: light-dark(#ffffff, #000000);
         --text-color: light-dark(#000000, #ffffff);
+        --text-color-blue: light-dark(#ffffff, #000000);
         --bg-color: light-dark(#ffffff, #000000);
     }
     html{
         font-family: 'Open Sans', 'Sans-serif';
         font-size: 100%;
         color: var(--text-color);
+        scroll-behavior: smooth;
     }
 }
 
@@ -100,10 +102,11 @@
     text-decoration: none;
     font-weight: bolder;
    }
-
-      .parameters__title{
-    font-weight: 700;
-    font-size: 36px;
+   .button__light:hover{
+    background-color:#a7a7a7;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bolder;
    }
 
    .infoblock{
@@ -142,8 +145,95 @@
     font-size: 23px;
    }
 
+   .provedeni__big{
+        margin-top: 6rem;
+   }
    .provedeni{
+    display: flex;
+    margin-top: 3rem;
+    gap: 4rem;
+   }
+   .provedeni__title{
+    display: flex;
+   }
+   .provedeni__standard, .provedeni__flymore{
+    width: 280px;
+   }
+   .button__blue{
+    background-color: var(--primary-color);
+    color: var(--text-color-blue);
+    text-decoration: none;
+    font-weight: bolder;
+   }
+      .button__blue:hover{
+    background-color:#4c9494;
+    color: var(--text-color-blue);
+    text-decoration: none;
+    font-weight: bolder;
+   }
+   .provedeni__subtitle{
+     font-weight: 700;
+    font-size: 18px;
+   }
+   .provedeni__standard img, .provedeni__flymore img{
+        width: 100%;
+        display: inline;
+        height: auto;
+   }
+
+   .banner{
+    background-color: var(--header-bg-color);
+    text-align: center;
+    margin-top: 6rem;
+    padding-top: 0.25rem;
+    padding-bottom: 3rem;
+   }
+   .banner__text{
+    color: var(--header-text-color);
+   }
+   .banner__text__main{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 0;
+   }
+   .banner__text__max{
+    font-size: 112px;
+    font-weight: 700;
+   }
+
+   .galerie{
     margin-top: 6rem;
    }
+   .galerie__row1{
+    width:100%;
+   }
+   .galerie__row1 img{
+    width: 100%;
+    height: auto;
+   }
+   .galerie__row2{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+   }
+   .galerie__row2 img{
+    width: 100%;
+    height: auto;
+   }
+
+   .footer{
+    background-color: var(--header-bg-color);
+    margin-top: 3rem;
+    padding: 3rem;
+    text-align: center;
+   }
+   .footer__link{
+    color: var(--header-text-color);
+    text-decoration: none;
+   }
 }
+
+
+
 
