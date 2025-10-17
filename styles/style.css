@@ -5,13 +5,13 @@
 
 @layer init {
     :root {
-        --color-scheme: light-dark;
+        --color-scheme: light dark;
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
         --header-text-color: light-dark(#fff, #fff);
         --primary-color: light-dark(#66D4D4, #2b5a5a);
         --secondary-color: light-dark(#ffffff, #000000);
         --text-color: light-dark(#000000, #ffffff);
-        --text-color-blue: light-dark(#ffffff, #000000);
+        --text-color-primary: light-dark(#ffffff, #ffffff);
         --bg-color: light-dark(#ffffff, #000000);
     }
     html{
@@ -37,6 +37,18 @@
         font-size: 4rem; /* 60px default, 1rem = 16px*/
         font-weight: 800;
         font-style: bold;
+    }
+
+    .heading--h1{
+        font-size: calc(1em + 3vw);
+    }
+
+    .heading--h3{
+        font-size: 1.125em;
+    }
+
+    .heading--bigger2x{
+        font-size: 2em;
     }
 
     h2{
@@ -96,15 +108,27 @@
     padding: 0.75em 2em;
     border-radius: 0.5rem;
    }
-   .button__light{
+   .button--light{
     background-color: var(--bg-color);
     color: var(--text-color);
     text-decoration: none;
     font-weight: bolder;
    }
-   .button__light:hover{
+   .button--light:hover{
     background-color:#a7a7a7;
     color: var(--text-color);
+    text-decoration: none;
+    font-weight: bolder;
+   }
+   .button--primary{
+    background-color: var(--primary-color);
+    color: var(--text-color-primary);
+    text-decoration: none;
+    font-weight: bolder;
+   }
+      .button--primary:hover{
+    background-color:#4c9494;
+    color: var(--text-color-primary);
     text-decoration: none;
     font-weight: bolder;
    }
@@ -136,71 +160,36 @@
     font-weight: 700;
     font-size: 20px;
    }
-   .features__list li{
-    margin-top: 1rem;
+   .features__list__item{
+    margin-bottom: 1em;
     font-size: 18px;
    }
-   .features__list li::marker{
+   .features__list__item::marker{ /*takovýto zápis je správný, marker se mění pouze nazev_polozky_seznamu::marker*/
     color: var(--primary-color);
-    font-size: 23px;
+    font-size: 1.5em;
    }
 
    .provedeni__big{
-        margin-top: 6rem;
+    margin-top: 6rem;
    }
    .provedeni{
-    display: flex;
-    margin-top: 3rem;
-    gap: 4rem;
-   }
-   .provedeni__title{
-    display: flex;
-   }
-   .provedeni__standard, .provedeni__flymore{
-    width: 280px;
-   }
-   .button__blue{
-    background-color: var(--primary-color);
-    color: var(--text-color-blue);
-    text-decoration: none;
-    font-weight: bolder;
-   }
-      .button__blue:hover{
-    background-color:#4c9494;
-    color: var(--text-color-blue);
-    text-decoration: none;
-    font-weight: bolder;
+    max-width: 20rem; /*délka bloku se neurčuje v pixelech, ale v rem*/
+    display: inline-block;
+    padding: 1em;
+    margin-top: 1rem;
+    vertical-align: top;
    }
    .provedeni__subtitle{
      font-weight: 700;
     font-size: 18px;
    }
-   .provedeni__standard img, .provedeni__flymore img{
-        width: 100%;
-        display: inline;
-        height: auto;
-   }
 
-   .banner{
+   .infoblock--down{
     background-color: var(--header-bg-color);
+    color: var(--secondary-color);
     text-align: center;
-    margin-top: 6rem;
-    padding-top: 0.25rem;
-    padding-bottom: 3rem;
    }
-   .banner__text{
-    color: var(--header-text-color);
-   }
-   .banner__text__main{
-    font-size: 50px;
-    font-weight: 700;
-    margin-bottom: 0;
-   }
-   .banner__text__max{
-    font-size: 112px;
-    font-weight: 700;
-   }
-
+   
    .galerie{
     margin-top: 6rem;
    }
