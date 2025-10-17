@@ -5,6 +5,7 @@
 
 @layer init {
     :root {
+        /*DEFINICE PROMĚNNÝCH BAREV*/
         --color-scheme: light dark;
         --header-bg-color: light-dark(#3B3E40, #3B3E40);
         --header-text-color: light-dark(#fff, #fff);
@@ -23,6 +24,7 @@
 }
 
 @layer design {
+    /*PŘÍMO HTML TAGY*/
     body{
         background-color: var(--bg-color);
     }
@@ -40,7 +42,8 @@
     }
 
     .heading--h1{
-        font-size: calc(1em + 3vw);
+        font-size: calc(1em + 2vw);
+        margin: 0;
     }
 
     .heading--h3{
@@ -61,6 +64,7 @@
         line-height: 1.35;
     }
 
+    /*RESPONZIVNÍ OBRÁZKY*/
     .img-fluid {
         width: 100%;
         display: block;
@@ -74,6 +78,7 @@
         margin-top: 1rem;
     }
 
+    /*HEADER SEKCE*/
    .header{
     background-image: url('../images/header-2560w.webp');
     background-size: cover;
@@ -102,10 +107,11 @@
     height: auto;
    }
 
+   /*DRUHY TLAČÍTEK A STYLY*/
    .button{
     display: inline-block;
     margin-top: 1rem;
-    padding: 0.75em 2em;
+    padding: 1em 2em;
     border-radius: 0.5rem;
    }
    .button--light{
@@ -133,10 +139,11 @@
     font-weight: bolder;
    }
 
+   /*INFOBLOCK - TYRKYSOVÝ RÁMEČEK*/
    .infoblock{
     color: var(--text-color);
     margin: 0;
-    padding: 1.5rem;
+    padding: 1.25rem;
     margin-top: 3rem;
     border-style:solid;
     border-color: var(--primary-color);
@@ -153,6 +160,7 @@
     line-height: 1.35;
    }
 
+   /*FEATURES - REŽIMY A SEZNAM UL*/
    .features{
     margin-top: 3rem;
    }
@@ -169,6 +177,7 @@
     font-size: 1.5em;
    }
 
+   /*PROVEDENÍ - DVĚ VARIANTY DRONU K ZAKOUPENÍ*/
    .provedeni__big{
     margin-top: 6rem;
    }
@@ -184,12 +193,27 @@
     font-size: 18px;
    }
 
+   /*INFOBLOCK--DOWN - ŠEDÝ BANNER MINI TO THE MAX*/
    .infoblock--down{
     background-color: var(--header-bg-color);
     color: var(--secondary-color);
     text-align: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-style: none;
+   }
+   .infoblock__title--down{
+    font-weight: 700;
+   }
+   .infoblock__body--down{
+    margin: 0;
+   }
+   .infoblock__footer--down{
+    margin-top: 1rem;
    }
    
+   /*GALERIE - OBRÁZKY*/
    .galerie{
     margin-top: 6rem;
    }
@@ -211,6 +235,7 @@
     height: auto;
    }
 
+   /*FOOTER - KONEC*/
    .footer{
     background-color: var(--header-bg-color);
     margin-top: 3rem;
@@ -222,6 +247,7 @@
     text-decoration: none;
    }
 }
+
 
 
 
