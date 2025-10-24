@@ -98,7 +98,7 @@
     margin-left: 9vh;
    }
    .header__text{
-    width: 800px;
+    max-width: 800px;
     font-size: 18px;
     line-height: 1.35;
    }
@@ -216,23 +216,21 @@
    /*GALERIE - OBRÁZKY*/
    .galerie{
     margin-top: 6rem;
+    box-sizing: border-box;
+    margin: -1em;
    }
-   .galerie__row1{
-    width:100%;
+   .galerie__title{
+    padding-top: 6rem;
    }
-   .galerie__row1 img{
-    width: 100%;
-    height: auto;
+   .galerie__row__item{
+    box-sizing: border-box;
+    width:calc(50% - 2em);
+    display: inline-block;
+    vertical-align: top;
+    margin: 1em;
    }
-   .galerie__row2{
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-   }
-   .galerie__row2 img{
-    width: 100%;
-    height: auto;
+   .galerie__row__item--w100{
+    width:calc(100% - 2em);
    }
 
    /*FOOTER - KONEC*/
