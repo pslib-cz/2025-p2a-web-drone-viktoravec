@@ -224,13 +224,13 @@
    }
    .galerie__row__item{
     box-sizing: border-box;
-    width:calc(50% - 2em);
+    width:calc(50% - 1em);
     display: inline-block;
     vertical-align: top;
-    margin: 1em;
+    margin: 0.5em;
    }
    .galerie__row__item--w100{
-    width:calc(100% - 2em);
+    width:calc(100% - 0.5em);
    }
 
    /*FOOTER - KONEC*/
@@ -245,8 +245,5 @@
     text-decoration: none;
    }
 }
-
-
-
 
 
